@@ -47,3 +47,63 @@ function promedioForeach(listaCalificaciones) {
 }
 
 promedioForeach([100, 80, 50, 50, 60, 10]);
+
+function imprimeArrayFor(elementos) {
+  for (var i = 0; i < elementos.length; i++) {
+    console.log(elementos[i]);
+  }
+}
+
+imprimeArrayFor(["uno", 2, null, 0]);
+
+function imprimeArrayForEach(elementos) {
+  elementos.forEach(function (elemento) {
+    console.log(elemento);
+  });
+}
+
+imprimeArrayForEach(["uno", 2, null, 0]);
+
+var array = ["uno", 2, null, 0];
+
+function ejemplo(array) {
+  array.forEach(function (elemento) {
+    console.log(elemento);
+  });
+}
+
+ejemplo(array);
+
+console.log("-----------------------------------------");
+/*
+Utiliza la función forEach para recorrer cada elemento del arreglo nombres. 
+En cada iteración debes agregar el nombre en mayusculas en el arreglo 
+nombreMayusculas
+*/
+console.log("Punto 2.");
+
+const nombres = [
+  "alberto",
+  "paty",
+  "Jose",
+  "daniel",
+  "luis",
+  "antonio",
+  "Luis",
+  "paty",
+  "luis",
+];
+
+const nombreMayusculas = [];
+
+nombres.forEach(function (nombre) {
+  nombreMayusculas.push(nombre.toUpperCase());
+});
+
+console.log(nombreMayusculas)
+
+const nombresEnMayusculas = nombres.map(function (nombre) {
+  return nombre.toUpperCase()
+});
+
+console.log(nombresEnMayusculas)
